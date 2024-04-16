@@ -1,9 +1,10 @@
 
-FROM openjdk:8-jdk-alpine
+FROM amazoncorretto:17.0.10
+WORKDIR /app
 
 EXPOSE 8080
 
-COPY C:/Java/99Repositories/Authorizationservice/target/Authorizationservice-0.0.1-SNAPSHOT.jar  app.jar
+COPY ./target/Authorizationservice-0.0.1-SNAPSHOT.jar app.jar
 
-CMD ["java", "-war", "app.war"]
+CMD ["java", "-jar", "app.jar"]
 
