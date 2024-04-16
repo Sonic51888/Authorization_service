@@ -4,6 +4,14 @@ services:
   myapp:
     build: ./
 
-    image: 'mydocker:1.0'
+    image: 'mydocker:3.0'
+    ports:
+      - '8080'
+
+
+  myapp2:
+    build: ./
+
+    image: 'mydocker:4.0'
     ports:
       - '8080'
